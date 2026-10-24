@@ -22,7 +22,7 @@ The project provides practical experience in robotics, motor control, hardware i
 - Test and troubleshoot the complete hardware and software system.
 
 <p align="center">
-  <img src="Images/WhatsApp%20Image%202026-05-17%20at%2023.23.41.jpeg" alt="3D robotic arm CAD assembly" width="400">
+  <img src="Images/3D CAD Assembly.png" width="400">
 </p>
 ## Hardware
 
