@@ -1,97 +1,97 @@
-# 🤖 AR4 Robotic Arm
+# AR4 Robotic Arm
 
 <p align="center">
-  <img src="C:\Users\skon\Desktop\GITHUB\ar4_ros_driver-main\image\4153.jpg
-  ar4_robotic_arm.jpg" alt="AR4 Robotic Arm" width="700">
+  <img src="Images/AR4-6-axis-DIY-Small-Robot-ARM_Annin-Robotics_orange_2.webp" alt="AR4 six-axis robotic arm" width="700">
 </p>
 
-## 📌 Project Overview
+## Project Overview
 
-This project focuses on the **development, integration and control of an AR4 robotic arm**, combining mechanical, electronic and embedded systems with robotic software.
+This project focuses on the development, integration, and control of an AR4 robotic arm, combining mechanical systems, electronics, embedded programming, and robotic software.
 
-The project was developed to gain practical experience in **robotics, motor control, embedded systems, hardware integration and ROS**.
+The project provides practical experience in robotics, motor control, hardware integration, and ROS-based robot visualization and control.
 
-## 🎯 Objectives
+## Objectives
 
-* Control the different joints of the robotic arm
-* Integrate stepper motors and motor drivers
-* Implement end-stop detection
-* Control the robotic gripper
-* Integrate embedded controllers with the robotic system
-* Integrate the robot with **ROS Noetic**
-* Visualize and control the robot using **RViz**
-* Test and troubleshoot the complete hardware/software system
+- Control the different joints of the robotic arm.
+- Integrate stepper motors and motor drivers.
+- Implement end-stop detection.
+- Control the robotic gripper.
+- Integrate embedded controllers with the robotic system.
+- Integrate the robot with ROS Noetic.
+- Visualize the robot using RViz.
+- Test and troubleshoot the complete hardware and software system.
 
-## 🔧 Hardware
+<p align="center">
+  <img src="Images/WhatsApp%20Image%202026-05-17%20at%2023.23.41.jpeg" alt="3D robotic arm CAD assembly" width="650">
+</p>
+## Hardware
 
-* AR4 Robotic Arm
-* Teensy 4.1
-* Arduino Mega
-* DM542A stepper motor drivers
-* Stepper motors
-* End-stop switches
-* Robotic gripper
-* Power supply
-* Electronic wiring and hardware interfaces
+- AR4 robotic arm
+- Teensy 4.1
+- Arduino Mega
+- DM542A stepper motor drivers
+- Stepper motors
+- End-stop switches
+- Robotic gripper
+- Power supply
+- Electronic wiring and hardware interfaces
 
-## 💻 Software & Tools
+## Software and Tools
 
-* C / C++
-* Arduino
-* ROS Noetic
-* Ubuntu 20.04
-* RViz
-* URDF / Xacro
-* Catkin
-* Git
+- C / C++
+- Arduino
+- ROS Noetic
+- Ubuntu 20.04
+- RViz
+- URDF / Xacro
+- Catkin
+- CMake
+- Git
 
-## 🤖 Robotics
+## Robotics
 
-The project involves several robotics concepts:
+The project involves the following robotics concepts:
 
-* Robot geometry
-* Forward kinematics
-* Inverse kinematics
-* Joint control
-* Motion control
-* Gripper control
-* Robot visualization
-* Hardware/software integration
+- Robot geometry
+- Forward kinematics
+- Inverse kinematics
+- Joint control
+- Motion control
+- Gripper control
+- Robot visualization
+- Hardware and software integration
+ <p align="center">
+  <img src="Images/energies-14-06690-g001.png" alt="Robotic arm joints and mechanical links" width="650">
+</p>
 
-## 🔌 Electronics & Embedded Systems
+## Electronics and Embedded Systems
 
 The system integrates:
 
-* Microcontrollers
-* Stepper motors
-* Motor drivers
-* End-stop sensors
-* STEP/DIR control
-* Digital I/O
-* Embedded controllers
-* Hardware wiring and troubleshooting
+- Microcontrollers
+- Stepper motors and motor drivers
+- End-stop sensors
+- STEP/DIR control signals
+- Digital input/output
+- Embedded controllers
+- Hardware wiring and troubleshooting
 
-## 🧪 Testing & Troubleshooting
+## Testing and Troubleshooting
 
-The development process followed an iterative engineering approach:
+The development process follows an iterative engineering approach:
 
 **Understand → Diagnose → Test → Fix → Validate → Improve**
 
-Hardware and software components were progressively tested to identify configuration, wiring and control issues and improve the reliability of the robotic system.
+Hardware and software components are tested progressively to identify configuration, wiring, and control issues and improve the reliability of the robotic system.
 
-## 📷 Project Images
+## Project Images
 
-Additional photos, diagrams and technical documentation will be added as the project repository is developed.
+Additional photographs, mechanical diagrams, and technical documentation can be added as the project develops.
 
-## 👨‍💻 Author
+## Author
 
 **Skandar Makari**
 
-Master's Student in EEA
-**Electronics · Embedded Systems · Robotics · Mechatronics**
+Electronics, Embedded Systems, Robotics, and Mechatronics
 
-📍 Dijon, France
-
----
-
-⭐ *Building, debugging, learning and improving — one robotic system at a time.*
+Dijon, France
