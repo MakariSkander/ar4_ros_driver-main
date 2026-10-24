@@ -1,7 +1,7 @@
 # AR4 Robotic Arm
 
 <p align="center">
-  <img src="Images/AR4-6-axis-DIY-Small-Robot-ARM_Annin-Robotics_orange_2.webp" alt="AR4 six-axis robotic arm" width="700">
+  <img src="Images/AR4-6-axis-DIY-Small-Robot-ARM_Annin-Robotics_orange_2.webp" alt="AR4 six-axis robotic arm" width="400">
 </p>
 
 ## Project Overview
@@ -22,7 +22,7 @@ The project provides practical experience in robotics, motor control, hardware i
 - Test and troubleshoot the complete hardware and software system.
 
 <p align="center">
-  <img src="Images/WhatsApp%20Image%202026-05-17%20at%2023.23.41.jpeg" alt="3D robotic arm CAD assembly" width="650">
+  <img src="Images/WhatsApp%20Image%202026-05-17%20at%2023.23.41.jpeg" alt="3D robotic arm CAD assembly" width="400">
 </p>
 ## Hardware
 
@@ -61,7 +61,7 @@ The project involves the following robotics concepts:
 - Robot visualization
 - Hardware and software integration
  <p align="center">
-  <img src="Images/energies-14-06690-g001.png" alt="Robotic arm joints and mechanical links" width="650">
+  <img src="Images/energies-14-06690-g001.png" alt="Robotic arm joints and mechanical links" width="400">
 </p>
 
 ## Electronics and Embedded Systems
