@@ -88,10 +88,3 @@ Hardware and software components are tested progressively to identify configurat
 
 Additional photographs, mechanical diagrams, and technical documentation can be added as the project develops.
 
-## Author
-
-**Skandar Makari**
-
-Electronics, Embedded Systems, Robotics, and Mechatronics
-
-Dijon, France
