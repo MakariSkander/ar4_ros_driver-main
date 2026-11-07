@@ -1,90 +1,82 @@
-# AR4 Robotic Arm
+# 🦾 AR4 Robotic Arm: Integration and Control
 
 <p align="center">
-  <img src="Images/AR4-6-axis-DIY-Small-Robot-ARM_Annin-Robotics_orange_2.webp" alt="AR4 six-axis robotic arm" width="400">
+  <img src="Images/3D CAD Assembly.png" alt="AR4 robotic arm 3D CAD assembly" width="400">
 </p>
 
-## Project Overview
+Integration and control of a 6-axis **AR4 robotic arm** (Annin Robotics): stepper motors and drivers, embedded controllers, limit switches, gripper, and ROS-based control and visualization.
 
-This project focuses on the development, integration, and control of an AR4 robotic arm, combining mechanical systems, electronics, embedded programming, and robotic software.
+Project carried out during my internship at **SOTMO** (Tunisia, February – July 2026).
 
-The project provides practical experience in robotics, motor control, hardware integration, and ROS-based robot visualization and control.
+## My work
 
-## Objectives
+- Integrated the electronics of the arm: Teensy 4.1 and Arduino Mega boards, DM542A stepper drivers, stepper motors, limit switches and gripper
+- Wired and configured the STEP/DIR control of each joint
+- Set up the ROS workspace to visualize and control the arm (URDF/Xacro model, RViz)
+- Integrated an NVIDIA Jetson Nano with a camera for object analysis
+- Tested and troubleshot the full system step by step: wiring, configuration, calibration and motion
 
-- Control the different joints of the robotic arm.
-- Integrate stepper motors and motor drivers.
-- Implement end-stop detection.
-- Control the robotic gripper.
-- Integrate embedded controllers with the robotic system.
-- Integrate the robot with ROS Noetic.
-- Visualize the robot using RViz.
-- Test and troubleshoot the complete hardware and software system.
-
-<p align="center">
-  <img src="Images/3D CAD Assembly.png" width="400">
-</p>
 ## Hardware
 
-- AR4 robotic arm
-- Teensy 4.1
-- Arduino Mega
-- DM542A stepper motor drivers
-- Stepper motors
-- End-stop switches
-- Robotic gripper
-- Power supply
-- Electronic wiring and hardware interfaces
+| Component | Role |
+|---|---|
+| AR4 robotic arm | 6-axis arm with gripper |
+| Teensy 4.1 | Main controller: stepper motors, encoders, limit switches |
+| Arduino Mega / Nano | Gripper servo and I/O |
+| DM542A drivers | Stepper motor drivers (STEP/DIR signals) |
+| Stepper motors | Joint actuation |
+| Limit switches | Homing and calibration of each joint |
+| NVIDIA Jetson Nano + camera | Object analysis |
 
-## Software and Tools
+## Software
 
-- C / C++
-- Arduino
-- ROS Noetic
-- Ubuntu 20.04
-- RViz
-- URDF / Xacro
-- Catkin
-- CMake
-- Git
+- **ROS 2** (Jazzy): `ros2_control`, MoveIt 2, RViz, Gazebo
+- **URDF / Xacro** robot model
+- **C++** hardware interface, **Arduino** firmware for the Teensy and the Nano
+- Linux (Ubuntu), CMake, Git, Docker
 
-## Robotics
+## Repository structure
 
-The project involves the following robotics concepts:
+| Folder | Content |
+|---|---|
+| `_ar4_description/` | Robot model (URDF/Xacro) and 3D meshes for each AR4 version |
+| `_ar4_driver/` | ROS 2 hardware interface that talks to the Teensy and the Arduino Nano |
+| `_ar4_firmware/` | Firmware for the Teensy 4.1 (`AR4_teensy`) and the Arduino Nano gripper board (`AR4_nano`) |
+| `_ar4_moveit_config/` | MoveIt 2 configuration: motion planning, joint limits, kinematics |
+| `_ar4_gazebo/` | Gazebo simulation |
+| `example_files/` | Simple pick-and-place example in C++ |
+| `docs/` | Gripper overcurrent protection: explanation and schematic |
 
-- Robot geometry
-- Forward kinematics
-- Inverse kinematics
-- Joint control
-- Motion control
-- Gripper control
-- Robot visualization
-- Hardware and software integration
- <p align="center">
-  <img src="Images/energies-14-06690-g001.png" alt="Robotic arm joints and mechanical links" width="400">
-</p>
+## Getting started
 
-## Electronics and Embedded Systems
+```bash
+# In a ROS 2 workspace
+cd ~/ar4_ws/src
+git clone https://github.com/MakariSkander/ar4_ros_driver-main.git
+cd ~/ar4_ws
+rosdep install --from-paths src --ignore-src -r -y
+colcon build
+source install/setup.bash
 
-The system integrates:
+# Simulation with MoveIt and RViz (no hardware needed)
+ros2 launch annin_ar4_moveit_config demo.launch.py
+```
 
-- Microcontrollers
-- Stepper motors and motor drivers
-- End-stop sensors
-- STEP/DIR control signals
-- Digital input/output
-- Embedded controllers
-- Hardware wiring and troubleshooting
+To control the real arm, flash `_ar4_firmware/AR4_teensy/AR4_teensy.ino` to the Teensy 4.1, then start the driver:
 
-## Testing and Troubleshooting
+```bash
+ros2 launch annin_ar4_driver driver.launch.py
+```
 
-The development process follows an iterative engineering approach:
+## Robotics concepts
 
-**Understand → Diagnose → Test → Fix → Validate → Improve**
+Robot geometry · forward and inverse kinematics · joint and motion control · homing with limit switches · gripper control · hardware/software integration
 
-Hardware and software components are tested progressively to identify configuration, wiring, and control issues and improve the reliability of the robotic system.
+## Credits
 
-## Project Images
+- The ROS 2 packages and firmware in this repository are based on the open-source [ar4_ros_driver](https://github.com/ycheng517/ar4_ros_driver) project by Yifei Cheng and contributors, under the MIT license (see [`LICENSE`](./LICENSE)).
+- The AR4 robotic arm is designed by [Annin Robotics](https://www.anninrobotics.com/).
 
-Additional photographs, mechanical diagrams, and technical documentation can be added as the project develops.
+## Author
 
+Skandar Makari · [GitHub](https://github.com/MakariSkander)
